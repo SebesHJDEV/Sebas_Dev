@@ -192,3 +192,103 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   color: #8e44ad;
 }
+
+/* -------------------
+   Cards
+------------------- */
+
+/* Nacimiento */
+.birth-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 3rem 2rem; /* más espacio */
+  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 100%;
+  margin: 0 auto 2rem;
+}
+
+.birth-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+}
+
+.birth-img-wrapper {
+  width: 260px; /* imagen más grande */
+  height: 260px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 4px solid #6f42c1;
+}
+
+.birth-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.birth-card h5 {
+  margin-top: 1.5rem;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+/* Familia */
+.profile-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 2rem 1.5rem;
+  margin: 1rem auto;
+  max-width: 100%;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.18);
+}
+
+.profile-img-wrapper {
+  width: 200px; /* imagen más grande */
+  height: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 4px solid #6f42c1;
+}
+
+.profile-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-card h6 {
+  margin-top: 0.75rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Responsive para familia: 3 por fila en md y lg */
+@media (min-width: 768px) {
+  .col-md-4 {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+  .profile-img-wrapper {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .profile-img-wrapper {
+    width: 240px;
+    height: 240px;
+  }
+}
+

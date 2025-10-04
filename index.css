@@ -1,0 +1,194 @@
+/* -------------------
+   General
+------------------- */
+body {
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* -------------------
+   Navbar
+------------------- */
+.navbar {
+  background-color: transparent;
+  transition: background 0.4s, box-shadow 0.4s;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar.scrolled {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.navbar .navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.navbar .navbar-brand span {
+  color: #6f42c1; /* acento púrpura */
+}
+
+.navbar-nav .nav-item {
+  margin-left: 1rem;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #6f42c1;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link.active {
+  color: #6f42c1;
+}
+
+/* -------------------
+   Hero
+------------------- */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 1.5rem;
+  background: linear-gradient(135deg, #7034b1 0%, #5693fd 100%);
+  color: #fff;
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.25);
+  z-index: 1;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.hero-section .btn-primary {
+  background-color: #8e44ad;
+  border: none;
+}
+
+.hero-section .btn-outline-secondary {
+  color: #fff;
+  border-color: #fff;
+}
+
+.hero-section .btn-outline-secondary:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+
+/* -------------------
+   About & Personal Card
+------------------- */
+.about-section, .hobbies-section {
+  padding: 4rem 1.5rem;
+}
+
+.personal-card {
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: .5rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.skills .progress {
+  height: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* -------------------
+   Hobbies
+------------------- */
+.hobbies-section {
+  background: #f9f5ff;
+}
+
+.hobby-card {
+  background: linear-gradient(135deg, #f0e5ff 0%, #d6c1ff 100%);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: #4b0082;
+  margin-bottom: 1.5rem;
+}
+
+.hobby-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.hobby-card .fs-1 {
+  font-size: 3rem;
+}
+
+.hobby-card h5 {
+  margin-top: 10px;
+  color: #5e2ca5;
+}
+
+.hobby-card p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.hobby-card div {
+  margin-top: 5px;
+  font-weight: 600;
+  color: #8e44ad;
+}

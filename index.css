@@ -1,294 +1,155 @@
-/* -------------------
-   General
-------------------- */
+/* ===== Body y Tipografía ===== */
 body {
-  scroll-behavior: smooth;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
-  margin: 0;
-  padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #f8f9fa;
+    color: #333;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-}
-
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-/* -------------------
-   Navbar
-------------------- */
+/* ===== Navbar ===== */
 .navbar {
-  background-color: transparent;
-  transition: background 0.4s, box-shadow 0.4s;
-  padding: 1rem 0;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
+    background-color: rgba(16, 21, 47, 0.7);
+    transition: all 0.4s;
+    backdrop-filter: blur(8px);
+}
+.navbar-brand {
+    color: #00bcd4 !important;
+}
+.nav-link {
+    color: #f0f0f0 !important;
+    transition: color 0.3s;
+}
+.nav-link:hover,
+.nav-link.active {
+    color: #00bcd4 !important;
 }
 
-.navbar.scrolled {
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.navbar .navbar-brand {
-  font-weight: 700;
-  font-size: 1.5rem;
-}
-
-.navbar .navbar-brand span {
-  color: #6f42c1; /* acento púrpura */
-}
-
-.navbar-nav .nav-item {
-  margin-left: 1rem;
-}
-
-.navbar-nav .nav-link {
-  position: relative;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.navbar-nav .nav-link::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: #6f42c1;
-  left: 0;
-  bottom: 0;
-  transition: width 0.3s;
-}
-
-.navbar-nav .nav-link:hover::after,
-.navbar-nav .nav-link.active::after {
-  width: 100%;
-}
-
-.navbar-nav .nav-link.active {
-  color: #6f42c1;
-}
-
-/* -------------------
-   Hero
-------------------- */
+/* ===== Hero ===== */
 .hero-section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 100px 1.5rem;
-  background: linear-gradient(135deg, #7034b1 0%, #5693fd 100%);
-  color: #fff;
-  position: relative;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1b1b2f, #162447);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
 }
-
-.hero-section::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.25);
-  z-index: 1;
-}
-
-.hero-section .container {
-  position: relative;
-  z-index: 2;
-}
-
-.hero-section h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.hero-section p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-}
-
 .hero-section .btn-primary {
-  background-color: #8e44ad;
-  border: none;
+    background-color: #00bcd4;
+    border: none;
+}
+.hero-section .btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
-.hero-section .btn-outline-secondary {
-  color: #fff;
-  border-color: #fff;
-}
-
-.hero-section .btn-outline-secondary:hover {
-  background-color: rgba(255,255,255,0.2);
-}
-
-/* -------------------
-   About & Personal Card
-------------------- */
-.about-section, .hobbies-section {
-  padding: 4rem 1.5rem;
-}
-
-.personal-card {
-  background-color: #fff;
-  border: 1px solid #dee2e6;
-  border-radius: .5rem;
-  padding: 2rem;
-  text-align: center;
-}
-
-.skills .progress {
-  height: 1rem;
-  margin-bottom: 1rem;
-}
-
-/* -------------------
-   Hobbies
-------------------- */
-.hobbies-section {
-  background: #f9f5ff;
-}
-
-.hobby-card {
-  background: linear-gradient(135deg, #f0e5ff 0%, #d6c1ff 100%);
-  padding: 20px;
-  border-radius: 15px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-  color: #4b0082;
-  margin-bottom: 1.5rem;
-}
-
-.hobby-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.hobby-card .fs-1 {
-  font-size: 3rem;
-}
-
-.hobby-card h5 {
-  margin-top: 10px;
-  color: #5e2ca5;
-}
-
-.hobby-card p {
-  font-size: 0.95rem;
-  color: #333;
-}
-
-.hobby-card div {
-  margin-top: 5px;
-  font-weight: 600;
-  color: #8e44ad;
-}
-
-/* -------------------
-   Cards
-------------------- */
-
-/* Nacimiento */
-.birth-card {
-  background: #fff;
-  border-radius: 20px;
-  padding: 3rem 2rem; /* más espacio */
-  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
-  transition: transform 0.3s, box-shadow 0.3s;
-  max-width: 100%;
-  margin: 0 auto 2rem;
-}
-
-.birth-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.18);
-}
-
-.birth-img-wrapper {
-  width: 260px; /* imagen más grande */
-  height: 260px;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 50%;
-  border: 4px solid #6f42c1;
-}
-
-.birth-img-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.birth-card h5 {
-  margin-top: 1.5rem;
-  font-weight: 600;
-  font-size: 1.4rem;
-  color: #333;
-}
-
-/* Familia */
+/* ===== About / Perfil ===== */
 .profile-card {
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-  transition: transform 0.3s, box-shadow 0.3s;
-  padding: 2rem 1.5rem;
-  margin: 1rem auto;
-  max-width: 100%;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+    padding: 1.5rem;
 }
-
 .profile-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 35px rgba(0,0,0,0.18);
+    transform: translateY(-5px);
 }
-
 .profile-img-wrapper {
-  width: 200px; /* imagen más grande */
-  height: 200px;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 50%;
-  border: 4px solid #6f42c1;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #00bcd4;
 }
-
 .profile-img-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.profile-card h6 {
-  margin-top: 0.75rem;
-  font-weight: 600;
-  font-size: 1.2rem;
-  color: #333;
+/* ===== Secciones favoritas / Juegos ===== */
+.fav-section {
+    padding: 4rem 1.5rem;
 }
 
-/* Responsive para familia: 3 por fila en md y lg */
-@media (min-width: 768px) {
-  .col-md-4 {
-    flex: 0 0 33.3333%;
-    max-width: 33.3333%;
-  }
-  .profile-img-wrapper {
-    width: 220px;
-    height: 220px;
-  }
+/* ===== Accordion limpio y consistente ===== */
+.accordion-button {
+    background: linear-gradient(135deg, #162447, #1f4068);
+    color: #fff; /* texto siempre blanco */
+    font-weight: 600;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: background 0.3s, color 0.3s;
+}
+.accordion-button:focus {
+    box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+    color: #fff; /* mantiene blanco cuando se abre */
+    background-color: #1b1b2f; /* fondo más oscuro al abrir */
+}
+.accordion-body {
+    background: #f9f9f9;
+    border-left: 3px solid #00bcd4;
+    border-radius: 0 0 10px 10px;
 }
 
-@media (min-width: 1200px) {
-  .profile-img-wrapper {
-    width: 240px;
-    height: 240px;
-  }
+/* ===== Imágenes de juegos ===== */
+.fav-img {
+    width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.fav-img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
 }
 
+/* ===== Modal ===== */
+.modal-blur {
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(8px);
+}
+#modalTitle {
+    color: #00bcd4;
+}
+
+/* ===== Tarjetas temáticas elegantes para juegos ===== */
+.game-card {
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    color: #fff;
+    text-align: center;
+}
+
+/* Dark Souls: dorado intenso estilo portada */
+.darksouls-bg {
+    background-color: #ECD960; /* dorado base */
+    background-image: linear-gradient(135deg, #FFD966 0%, #E6C200 50%, #CFA830 100%);
+    color: #1b1b1b; /* contraste con dorado */
+}
+
+/* Elden Ring: místico, azul verdoso oscuro */
+.eldenring-bg {
+    background-color: #0D2F30;
+    background-image: linear-gradient(135deg, #0D2F30 0%, #1F4F4F 100%);
+    color: #F4D35E; /* dorado para contraste */
+}
+
+/* Valorant: acción, morado rojizo */
+.valorant-bg {
+    background-color: #2a1a3d;
+    background-image: linear-gradient(145deg, #2a1a3d 0%, #8e2f4f 100%);
+    color: #FF5C5C;
+}
+
+/* Minecraft: verde terroso con degradado suave */
+.minecraft-bg {
+    background-color: #4caf50;
+    background-image: linear-gradient(135deg, #4caf50 0%, #81c784 100%);
+    color: #fff;
+}
